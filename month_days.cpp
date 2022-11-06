@@ -8,14 +8,11 @@ int find_days(int year, int month){
 	
 	if (month == 2){
 		day = 28;		
-		if (year % 4 == 0){
+		if (year % 400 == 0){
 			day = 29;
-			if (year % 100 == 0){
+			if (year % 4 == 0 && year % 100 != 0){
 				day = 29;
-				if (year % 400 == 0){
-					day = 29;
-				}	
-			}
+			}	
 		}
 	}	
 	else{
