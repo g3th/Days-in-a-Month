@@ -7,12 +7,14 @@ int find_days(int year, int month){
 	vector<int> shorter_months = {4, 6, 9, 11};
 	
 	if (month == 2){
-		day = 28;		
 		if (year % 400 == 0){
 			day = 29;
-			if (year % 4 == 0 && year % 100 != 0){
-				day = 29;
-			}	
+		}
+		else if (year % 4 == 0 && year % 100 != 0){
+			day = 29;
+		}
+		else{
+			day = 28;
 		}
 	}	
 	else{
